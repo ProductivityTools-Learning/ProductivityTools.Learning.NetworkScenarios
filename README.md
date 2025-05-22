@@ -16,4 +16,17 @@ Tutorial:
 
 Create a rule for Network to allow for remote connection
 
+![alt text](image-1.png)
 
+Create 4 VMs
+
+![alt text](image-2.png)
+
+Install Apache on DatabaseServer
+
+```
+sudo apt-get update
+sudo apt-get install apache2 -y 
+echo '<!doctype html><html><body><h1>Hello World!</h1></body></html>' | sudo tee /var/www/html/index.html
+for ((i=1;i<=50;i++)); do curl $MY_SERVER; done
+```
